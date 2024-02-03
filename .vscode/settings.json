@@ -1,0 +1,6 @@
+{
+    "deno.enable": true,
+    "[javascript]": {
+        "editor.formatOnSave": true
+    }
+}

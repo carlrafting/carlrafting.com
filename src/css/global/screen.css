@@ -1,0 +1,47 @@
+:root {
+    --color-text: #181010;
+    --color-background: #EFE6E6;
+    --color-overlay: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-text: #EFE6E6;
+        --color-background: #181010;
+        --color-overlay: #ffffff05;
+    }
+}
+
+html {
+    color-scheme: light dark;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 40rem) 1fr;
+    column-gap: 1rem;
+    min-block-size: 100svh;
+}
+
+body {
+    grid-column: 2/2;
+    margin: 0;
+    padding-inline: 1rem;
+    background-color: var(--color-overlay);
+}
+
+a {
+    &,
+    &:link,
+    &:visited {
+        color: inherit;
+        text-decoration: underline;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+svg {
+    fill: currentColor;
+}

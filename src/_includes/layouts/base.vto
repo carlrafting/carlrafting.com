@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<meta charset="utf-8">
+<title>
+{{ if it.title }}
+{{ title }} &mdash; {{ site.name }}
+{{ else }}
+{{ site.description }}
+{{ /if }}
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{ if it.description }}
+<meta name="description" content="{{ description }}">
+{{ /if }}
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<link rel="me" href="https://mas.to/@carlrafting">
+{{ if it.license }}
+<link rel="license" href="{{ license.url }}">
+{{ /if }}
+<link rel="stylesheet" href="/css/global/all.css" media="all">
+<link rel="stylesheet" href="/css/global/screen.css" media="screen">
+{{ content }}

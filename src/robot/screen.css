@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    min-height: 100svh;
+}
+
+[data-state=on] .robot-emoji {
+    cursor: pointer;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.bubble {
+    background: var(--color-overlay, transparent);
+    padding: 1em;
+    border-radius: 1em;
+    /* position: relative; */
+    transition: opacity 100ms, transform 100ms;
+    animation: fadein 250ms ease-in-out;
+    opacity: 1;
+    display: inline-block;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.bubble--link {
+    color: #fff;
+    background: #1872ca;
+}
+
+.bubble--link a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.bubble--link a:hover {
+    text-decoration: underline;
+}
