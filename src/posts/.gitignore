@@ -1,0 +1,3 @@
+# this gitignore is only used during development
+# the following line should be removed
+*.md
