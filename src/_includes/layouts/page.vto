@@ -28,9 +28,18 @@ body {
 <nav id="skip-nav">
 <a class="skip media-noprint" href="#main-content" title="Skip to page main content">Main Content</a>
 </nav>
-<a href="/">
-    logo
-</a>
+<nav id="main-nav">
+<ul>
+    <li>
+        <a class="site-title" href="/" title="{{ site.title }}">
+            {{ include 'svg/logo.svg' }}
+        </a>
+    </li>
+    <li>
+        <a href="{{ '/about/' |> url }}">About</a>
+    </li>
+</ul>
+</nav>
 </header>
 
 <main id="main-content">
