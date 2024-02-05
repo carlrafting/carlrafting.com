@@ -1,0 +1,6 @@
+/* Styles that applies to print media */
+a[href] {
+    &::after {
+        content: " (" attr(href) ") ";
+    }
+}
