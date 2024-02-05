@@ -1,9 +1,73 @@
 /* Styles that applies to all media */
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-    line-height: 1.25;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    line-height: 1.375;
     font-size: 1rem;
+    hyphens: auto;
+    text-wrap: balance;
+}
+
+input,
+select,
+textarea,
+button {
+    font: inherit;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    padding: 0;
+    margin-block-end: 1rem;
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    font-style: italic;
+    border: 0;
+}
+
+pre code {
+    white-space: pre-wrap;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-block-end: 1rem;
+}
+
+th {
+    text-align: left;
+}
+
+th,
+td {
+    padding-block: .25rem;
+}
+
+th + *,
+td + * {
+    padding-inline-start: 1rem;
+}
+
+h1 {
+    line-height: 1.1875;
+    max-inline-size: 30ch;
 }
 
 p,
@@ -13,6 +77,17 @@ dl {
     max-inline-size: 70ch;
 }
 
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
 .text-italic {
     font-style: italic;
+}
+
+@media print {
+    .media-noprint {
+        display: none;
+    }
 }
