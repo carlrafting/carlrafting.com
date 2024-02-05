@@ -10,12 +10,26 @@ body {
     display: grid;
     grid-auto-rows: auto 1fr auto;
 }
+.skip {
+    position: absolute;
+    transform: translateY(-100%);
+    top: 0;
+    left: 0;
+}
+.skip:focus {
+    transform: translateY(0);
+}
+.site-title {
+    font-size: 1.25rem;
 main {
     margin-block: auto;
 }
 </style>
 
 <header>
+<nav id="skip-nav">
+<a class="skip media-noprint" href="#main-content" title="Skip to page main content">Main Content</a>
+</nav>
 <a href="/">
     logo
 </a>
