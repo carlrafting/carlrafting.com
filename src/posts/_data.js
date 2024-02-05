@@ -1,4 +1,5 @@
 export const url = (page) => {
     const basename = page.data.basename;
-    return `/post/${basename}/`;
+    const slug = page.data.slug;
+    return `/post/${slug}/`;
 }
