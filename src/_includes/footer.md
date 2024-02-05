@@ -1,0 +1,1 @@
+All content on this **website** by [me](/ "Carl Räfting") is licensed under <a title="Attribution-NonCommercial-NoDerivs 4.0 International" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license noopener noreferrer">CC BY-NC-ND 4.0</a>.
