@@ -15,6 +15,14 @@
 }
 
 html {
+    /* @start text-size-adjust-fix */
+    /* Prevent font size inflation */
+    /* https://piccalil.li/blog/a-more-modern-css-reset/ */
+    /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    /* @end text-size-adjust-fix */
     color: var(--color-text);
     background-color: var(--color-background);
     display: grid;
