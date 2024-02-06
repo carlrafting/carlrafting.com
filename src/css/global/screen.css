@@ -41,7 +41,6 @@ html {
 body {
     grid-column: 2/2;
     margin: 0;
-    padding-inline: 1rem;
 }
 
 a {
