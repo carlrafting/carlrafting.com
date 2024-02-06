@@ -62,12 +62,9 @@ a {
 :target {
     outline: 2px solid light-dark(orangered,orange);
     outline-offset: 1rem;
+    scroll-margin-block: 2rem;
 }
 
 svg path {
     fill: currentColor;
-}
-
-[id] {
-	scroll-margin-top: 2rem;
 }
