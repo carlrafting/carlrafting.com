@@ -8,8 +8,8 @@ import lang_javascript from "npm:highlight.js/lib/languages/javascript";
 import lang_bash from "npm:highlight.js/lib/languages/bash";
 
 const site = lume({
-    location: new URL('https://carlrafting.com'),
-    src: './src'
+  location: new URL("https://carlrafting.com"),
+  src: "./src",
 });
 site.use(codeHighlight({
   languages: {
@@ -21,13 +21,13 @@ site.use(codeHighlight({
 }));
 site.use(feed());
 
-site.filter('log', (value) => console.log(value));
-site.filter('date', (value) => {
-    const locale = new Intl.DateTimeFormat('sv-se');
-    return locale.format(value);
+site.filter("log", (value) => console.log(value));
+site.filter("date", (value) => {
+  const locale = new Intl.DateTimeFormat("sv-se");
+  return locale.format(value);
 });
 
-site.copy(['.css', '.js']);
+site.copy([".css", ".js"]);
 site.copyRemainingFiles();
 
 // console.log({ site });
