@@ -40,16 +40,25 @@ body {
 
 a {
     &,
-    &:link,
-    &:visited {
+    &:where(:link, :visited) {
         color: var(--color-links);
         font-weight: 600;
         text-decoration: none;
         text-underline-offset: 0.25em;
     }
 
-    &:hover {
+    &:where(:hover, :focus) {
+        color: var(--color-text);
         text-decoration: underline;
+    }
+
+    &:where(:active) {
+        color: color-mix(
+            in srgb, 
+            var(--color-links) 100%, 
+            var(--color-text) 33%
+        );
+        text-decoration: none;
     }
 }
 
@@ -59,6 +68,7 @@ a {
     scroll-margin-block: 2rem;
 }
 
-svg path {
-    fill: currentColor;
+.full-bleed {
+    width: 100vw;
+    margin-inline-start: calc(50% + -50vw);
 }

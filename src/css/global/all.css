@@ -32,13 +32,26 @@ legend {
     margin-block-end: 1rem;
 }
 
+svg,
 img {
-    display: inline-block;
+    display: block;
+    width: auto;
+    height: auto;
     max-width: 100%;
+}
+
+img {
     height: auto;
     vertical-align: middle;
     font-style: italic;
     border: 0;
+}
+
+pre {
+    background-color: var(--color-overlay);
+    padding: 1rem;
+    border-radius: .5rem;
+    margin-inline: calc(-1rem + -1em);
 }
 
 pre code {
@@ -80,6 +93,7 @@ dl {
 nav ul {
     list-style: none;
     padding: 0;
+    max-inline-size: none;
 }
 
 .text-italic {
