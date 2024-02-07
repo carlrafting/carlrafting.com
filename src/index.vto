@@ -1,0 +1,24 @@
+---
+title: Hello!
+layout: layouts/page.vto
+---
+
+{{ include 'intro.md' |> md }}
+
+<h1>Blog Posts</h1>
+
+<ul>
+    <li><a href="/feed.xml">RSS Feed</a></li>
+    <li><a href="/feed.json">JSON Feed</a></li>
+</ul>
+
+<ul class="posts">
+{{ for post of search.pages('type=post', 'date=desc') }}
+    <li>
+        <article>
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <time datetime="{{ post.date.toISOString() }}">{{ post.date |> date }}</time>
+        </article>
+    </li>
+{{ /for }}
+</ul>
