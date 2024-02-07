@@ -19,7 +19,15 @@ site.use(codeHighlight({
     bash: lang_bash,
   },
 }));
-site.use(feed());
+site.use(feed({
+  output: ["feed.xml", "feed.json"],
+  query: "type=post",
+  info: {
+    title: "Carl Räftings Feed",
+    description: "=site.description",
+    generator: false,
+  },
+}));
 
 site.filter("log", (value) => console.log(value));
 site.filter("date", (value) => {
