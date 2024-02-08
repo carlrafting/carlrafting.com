@@ -1,17 +1,29 @@
 /* Styles that applies to screen media */
 
 :root {
-    color-scheme: light dark;
+    color-scheme: light;
     /* https://coolors.co/0d0808-c4313d */
 
-    --color-red: light-dark(#C4313D, #D24B57);
+    --color-red: #C4313D;
     --color-dark: #100405;
     --color-light: #FBEFF0;
 
     --color-links: var(--color-red);
-    --color-text: light-dark(var(--color-dark), var(--color-light));
-    --color-background: light-dark(var(--color-light), var(--color-dark));
-    --color-overlay: light-dark(#fff, #ffffff05);
+    --color-text: var(--color-dark);
+    --color-background: var(--color-light);
+    --color-overlay: #fff;
+    --color-focus-outline: orangered;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+        --color-red: #D24B57;
+        --color-text: var(--color-light);
+        --color-background: var(--color-dark);
+        --color-overlay: #ffffff05;
+        --color-focus-outline: orange;
+    }
 }
 
 html {
@@ -63,7 +75,7 @@ a {
 }
 
 :target {
-    outline: 2px solid light-dark(orangered,orange);
+    outline: 2px solid var(--color-focus-outline);
     outline-offset: 1rem;
     scroll-margin-block: 2rem;
 }
