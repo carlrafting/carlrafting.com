@@ -24,6 +24,7 @@
 <link rel="me" href="{{ social.mastodon }}">
 <link rel="me" href="{{ social.github }}">
 <link rel="me" href="{{ social.bluesky }}">
+<link rel="manifest" href="/assets/manifest.json">
 {{ if it.license }}
 <link rel="license" href="{{ license.url }}">
 {{ /if }}
@@ -44,4 +45,25 @@
     background: transparent;
 }
 </style>
+<script type="module">
+const registerServiceWorker = async () => {
+  if ("serviceWorker" in navigator) {
+    try {
+      const registration = await navigator.serviceWorker.register("/sw.js", {
+        scope: "/",
+      });
+      if (registration.installing) {
+        console.log("Service worker installing");
+      } else if (registration.waiting) {
+        console.log("Service worker installed");
+      } else if (registration.active) {
+        console.log("Service worker active");
+      }
+    } catch (error) {
+      console.error(`Registration failed with ${error}`);
+    }
+  }
+};
+registerServiceWorker();
+</script>
 {{ content }}
