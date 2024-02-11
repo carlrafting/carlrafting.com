@@ -4,7 +4,8 @@
 }
 
 .robot-emoji {
-    font-size: 4em;
+    width: 4rem;
+    height: 4rem;
     display: inline-block;
     margin-block-end: .1em;
 }
