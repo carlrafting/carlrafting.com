@@ -7,6 +7,10 @@ import lang_css from "npm:highlight.js/lib/languages/css";
 import lang_javascript from "npm:highlight.js/lib/languages/javascript";
 import lang_bash from "npm:highlight.js/lib/languages/bash";
 
+console.log({
+  deno: Deno.version,
+});
+
 const site = lume({
   location: new URL("https://carlrafting.com"),
   src: "./src",
