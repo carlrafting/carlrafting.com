@@ -108,6 +108,18 @@ nav ul {
     max-inline-size: none;
 }
 
+hr {
+    margin: 0;
+    border-width: 0;
+
+    &::after {
+        font-size: 1.25rem;
+        content: "***";
+        text-align: center;
+        display: block;
+    }
+}
+
 .text-italic {
     font-style: italic;
 }
