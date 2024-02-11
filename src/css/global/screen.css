@@ -4,6 +4,8 @@
     color-scheme: light;
     /* https://coolors.co/0d0808-c4313d */
 
+    --color-space: oklab;
+
     --color-red: #C4313D;
     --color-dark: #100405;
     --color-light: #FBEFF0;
@@ -66,8 +68,8 @@ a {
 
     &:where(:active) {
         color: color-mix(
-            in srgb, 
-            var(--color-links) 100%, 
+            in var(--color-space),
+            var(--color-links) 100%,
             var(--color-text) 33%
         );
         text-decoration: none;
@@ -75,11 +77,28 @@ a {
 }
 
 hr {
-    color: color-mix(in oklab, var(--color-red) 100%, var(--color-background) 50%);
+    color: color-mix(
+        in var(--color-space),
+        var(--color-red) 100%,
+        var(--color-background) 50%
+    );
 }
 
 blockquote {
+    color: color-mix(
+        in var(--color-space),
+        var(--color-text) 75%,
+        var(--color-overlay) 50%
+    );
     background-color: var(--color-overlay);
+
+    &::before {
+        color: color-mix(
+            in var(--color-space),
+            var(--color-text) 50%,
+            var(--color-red) 80%
+        );
+    }
 }
 
 :target {
