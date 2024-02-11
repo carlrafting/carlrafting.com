@@ -1,3 +1,5 @@
+// this script is based on Steve Faulkner's bookmarklets at:
+// https://validator.w3.org/nu/about.html#extras
 (function () {
   function c(a, b) {
     var c = document.createElement("textarea");
