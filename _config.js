@@ -36,7 +36,7 @@ site.filter("date", (value) => {
 });
 
 site.copy([".css", ".js"]);
-site.copy("assets/manifest.json");
+site.copy("assets/manifest.webmanifest");
 site.copyRemainingFiles();
 
 // console.log({ site });
