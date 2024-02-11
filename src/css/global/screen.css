@@ -78,6 +78,10 @@ hr {
     color: color-mix(in oklab, var(--color-red) 100%, var(--color-background) 50%);
 }
 
+blockquote {
+    background-color: var(--color-overlay);
+}
+
 :target {
     outline: 2px solid var(--color-focus-outline);
     outline-offset: 1rem;
