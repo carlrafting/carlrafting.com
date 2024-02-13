@@ -79,6 +79,32 @@ footer:hover {
 footer nav ul {
   display: flex;
   column-gap: 1rem;
+    @layer toggle-opacity {
+        label[for=footer-opacity] {
+            & > svg[data-state] {
+                display: none !important;
+                width: 2rem !important;
+                height: 2rem !important;
+                margin-inline: auto;
+            }
+
+            :not(:checked) + & > svg[data-state=off],
+            :checked + & > svg[data-state=on] {
+                display: block !important;
+            }
+        }
+        #footer-opacity {
+            &,
+            & + label {
+                transition: none;
+                opacity: 100% !important;
+            }
+
+            &:checked + label ~ * {
+                opacity: 100% !important;
+            }
+        }
+    }
 }
 </style>
 {{ if url === '/' }}
@@ -124,6 +150,11 @@ footer nav ul {
 </main>
 
 <footer>
+<input type="checkbox" id="footer-opacity" hidden>
+<label for="footer-opacity" title="Toggle footer opacity">
+{{ include "icons/lightbulb.svg" }}
+{{ include "icons/lightbulb-fill.svg" }}
+</label>
 <nav>
     <ul>
         <li><a rel="me external" href="{{ social.mastodon }}" title="Mastodon">{{ include 'icons/mastodon.svg' }}</a></li>
