@@ -12,7 +12,7 @@ html {
     font-size: 1rem;
     -webkit-hyphens: auto;
     hyphens: auto;
-    text-wrap: balance;
+    /* text-wrap: balance; */
 }
 
 input,
