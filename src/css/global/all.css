@@ -130,12 +130,11 @@ blockquote {
     &::before {
         content: "»";
         font-size: 2rem;
-        display: inline-block;
+        line-height: 1;
         position: absolute;
         top: 0;
         left: 0;
         translate: .5rem;
-        opacity: 50%;
     }
 }
 
