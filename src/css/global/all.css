@@ -9,7 +9,7 @@
 html {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     line-height: 1.375;
-    font-size: 1rem;
+    font-size: 1.125rem;
     -webkit-hyphens: auto;
     hyphens: auto;
     /* text-wrap: balance; */
@@ -100,7 +100,7 @@ p,
 ul,
 ol,
 dl {
-    max-inline-size: 70ch;
+    max-inline-size: 60ch;
 }
 
 nav ul {
