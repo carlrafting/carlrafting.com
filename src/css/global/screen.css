@@ -95,7 +95,7 @@ blockquote {
     &::before {
         color: color-mix(
             in var(--color-space),
-            var(--color-text) 50%,
+            var(--color-text) 10%,
             var(--color-red) 80%
         );
     }
