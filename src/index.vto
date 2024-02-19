@@ -12,13 +12,23 @@ layout: layouts/page.vto
     <li><a href="/feed.json">JSON Feed</a></li>
 </ul>
 
-<ul class="posts">
+<div class="posts">
+{{ set current_year = null }}
+{{ set current_month = null }}
 {{ for post of search.pages('type=post', 'date=desc') }}
-    <li>
-        <article>
-            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-            <time datetime="{{ post.date.toISOString() }}">{{ post.date |> date }}</time>
-        </article>
-    </li>
+    {{ set year = post.date.getFullYear() }}
+    {{ set month = post.date.getMonth() }}
+    {{ if current_year !== year }}
+        {{ set current_year = year }}
+        <h2>{{ year }}</h2>
+    {{ /if }}
+    {{ if current_month !== month }}
+        {{ set current_month = month }}
+        <h3>{{ post.date |> date('MMMM') }}</h3>
+    {{ /if }}
+    <article>
+        <time datetime="{{ post.date.toISOString() }}">{{ post.date |> date('dd') }}</time>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    </article>
 {{ /for }}
-</ul>
+</div>
