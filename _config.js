@@ -12,6 +12,7 @@ console.log({
   deno: Deno.version,
 });
 
+const prod = Deno.env.get("DENO_ENV") === "prod";
 const site = lume({
   location: new URL("https://carlrafting.com"),
   src: "./src",
@@ -35,7 +36,7 @@ site.use(feed({
   },
 }));
 
-site.filter("log", (value) => console.log(value));
+site.data("prod", prod === true);
 
 site.copy([".css", ".js"]);
 site.copy("assets/manifest.webmanifest");

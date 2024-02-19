@@ -1,0 +1,3 @@
+service: umami
+script: https://eu.umami.is/script.js
+id: 43dfa8c5-6b92-432e-a420-623e517783c2

@@ -186,4 +186,6 @@ license:
 {{ include 'footer.md' |> md }}
 </footer>
 
-<script async src="https://eu.umami.is/script.js" data-website-id="43dfa8c5-6b92-432e-a420-623e517783c2"></script>
+{{ if prod }}
+<script async src="{{ analytics.script }}" data-website-id="{{ analytics.id }}"></script>
+{{ /if }}
