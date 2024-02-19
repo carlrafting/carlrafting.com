@@ -91,9 +91,24 @@ td + * {
     padding-inline-start: 1rem;
 }
 
-h1 {
+h1,
+h2,
+h3 {
     line-height: 1.1875;
     max-inline-size: 30ch;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+h3 {
+    font-size: 1.125rem;
+    font-weight: normal;
 }
 
 p,
