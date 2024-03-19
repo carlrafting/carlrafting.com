@@ -1,5 +1,10 @@
+/**
+ * @param {Lume.Page} page
+ * @returns {string|undefined} slug url if it exists
+ */
 export const url = (page) => {
-    const basename = page.data.basename;
-    const slug = page.data.slug;
+  const { slug } = page.data;
+  if (slug) {
     return `/post/${slug}/`;
-}
+  }
+};
