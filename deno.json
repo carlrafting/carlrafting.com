@@ -8,6 +8,8 @@
     "lume/": "https://deno.land/x/lume@v2.1.1/"
   },
   "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
     "types": [
       "lume/types.ts"
     ]
