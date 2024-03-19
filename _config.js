@@ -31,7 +31,7 @@ site.use(feed({
   query: "type=post",
   info: {
     title: "Carl Räftings Feed",
-    description: "=site.description",
+    description: "=site.title",
     generator: false,
   },
 }));

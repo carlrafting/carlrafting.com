@@ -1,6 +1,5 @@
 lang: en
-title: "Carl Räfting's Home"
-description: "Carl Räfting's Personal Home on the Web"
+title: "Carl Räfting"
 url: "https://carlrafting.com"
 repository_url: https://github.com/carlrafting/carlrafting.com/
 manifest: /assets/manifest.webmanifest
