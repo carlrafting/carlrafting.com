@@ -1,9 +1,10 @@
-<script type="module">
-const registerServiceWorker = async () => {
-  if ("serviceWorker" in navigator) {
+const path = "/sw.js";
+const scope = "/";
+export const register = async () => {
+  if (navigator?.serviceWorker) {
     try {
-      const registration = await navigator.serviceWorker.register("/sw.js", {
-        scope: "/",
+      const registration = await navigator.serviceWorker.register(path, {
+        scope,
       });
       if (registration.installing) {
         console.log("Service worker installing");
@@ -17,5 +18,3 @@ const registerServiceWorker = async () => {
     }
   }
 };
-registerServiceWorker();
-</script>
