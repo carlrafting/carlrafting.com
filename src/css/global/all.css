@@ -96,6 +96,7 @@ h2,
 h3 {
     line-height: 1.1875;
     max-inline-size: 30ch;
+    text-wrap: balance;
 }
 
 h1 {
@@ -114,7 +115,8 @@ h3 {
 p,
 ul,
 ol,
-dl {
+dl,
+hr {
     max-inline-size: 60ch;
 }
 
