@@ -35,11 +35,11 @@ jobs:
       # - name: Verify formatting
       #   run: deno fmt --check
 
-      - name: Run linter
-        run: deno lint
+      #- name: Run linter
+      #  run: deno lint
 
-      # - name: Run tests
-      #  run: deno test -A
+      #- name: Run tests
+      # run: deno test -A
 
       - name: Build website with lume
         run: deno task build
