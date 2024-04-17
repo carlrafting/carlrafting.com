@@ -5,4 +5,4 @@ The source code for this website is licensed under the [MIT License](/license). 
 
 ## Deploy status
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/02d75dfa-7432-4d13-b6de-ac33093bd3a8/deploy-status)](https://app.netlify.com/sites/spectacular-rolypoly-2eee67/deploys)
+![Deploy Status](https://github.com/carlrafting/carlrafting.com/actions/workflows/deno.yml/badge.svg)
