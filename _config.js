@@ -14,7 +14,6 @@ console.log({
 
 const prod = Deno.env.get("DENO_ENV") === "prod";
 const site = lume({
-  location: new URL("https://carlrafting.com"),
   src: "./src",
 });
 site.use(date());
