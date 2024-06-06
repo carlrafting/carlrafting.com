@@ -8,10 +8,6 @@ import lang_css from "npm:highlight.js/lib/languages/css";
 import lang_javascript from "npm:highlight.js/lib/languages/javascript";
 import lang_bash from "npm:highlight.js/lib/languages/bash";
 
-console.log({
-  deno: Deno.version,
-});
-
 const prod = Deno.env.get("DENO_ENV") === "prod";
 const site = lume({
   src: "./src",
