@@ -1,9 +1,9 @@
 {
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable-kv -A -",
-    "build": "lume",
-    "serve": "lume -s",
-    "cms": "lume -s cms"
+    "build": "deno task lume",
+    "serve": "deno task lume -s",
+    "cms": "deno task lume -s cms"
   },
   "imports": {
     "lume/": "https://deno.land/x/lume@v2.2.1/",
