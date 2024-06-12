@@ -58,6 +58,22 @@ license:
     {
         margin-inline-end: auto;
     }
+
+    a:is([href*="subscribe"]) {
+        & {
+            vertical-align: center;
+        }
+        &::after {
+            content: "RSS JSON";
+            font-size: .75rem;
+            line-height: 1;
+            margin-inline-start: .25rem;
+            display: inline-block;
+            vertical-align: top;
+            color: var(--color-text);
+            opacity: 75%;
+        }
+    }
 }
 
 @layer logo {
