@@ -1,13 +1,13 @@
 {
   "tasks": {
-    "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable-kv -A -",
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
     "build": "deno task lume",
     "serve": "deno task lume -s",
-    "cms": "deno task lume -s cms"
+    "cms": "deno task lume cms"
   },
   "imports": {
-    "lume/": "https://deno.land/x/lume@v2.2.1/",
-    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.4.2/"
+    "lume/": "https://deno.land/x/lume@v2.2.4/",
+    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.5.6/"
   },
   "compilerOptions": {
     "allowJs": true,
