@@ -1,4 +1,5 @@
-import lumeCMS, { Kv } from "lume/cms.ts";
+import lumeCMS from "lume/cms/mod.ts";
+import Kv from "lume/cms/storage/kv.ts";
 
 const cms = lumeCMS();
 const kv = await Deno.openKv();
