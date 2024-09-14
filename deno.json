@@ -1,4 +1,7 @@
 {
+  "unstable": [
+    "kv"
+  ],
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
     "build": "deno task lume",
