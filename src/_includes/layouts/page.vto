@@ -163,53 +163,57 @@ license:
 </style>
 {{ /if }}
 
-<header>
-<nav id="skip-nav">
-<a class="skip media-noprint" href="#main-content" title="Skip to page main content">Main Content</a>
-</nav>
-<nav id="main-nav">
-<ul>
-    <li>
-        <a href="/" title="{{ site.title }}">
-            {{ include 'svg/logo.svg' }}
-        </a>
-    </li>
-    <li>
-        <a href="{{ '/about/' |> url }}">About</a>
-    </li>
-    <li>
-        <a href="{{ '/subscribe/' |> url }}">Subscribe</a>
-    </li>
-</ul>
-</nav>
-</header>
 
-<main id="main-content">
-<a class="skip media-noprint" href="#">Reset Focus</a>
-{{ content }}
-</main>
-
-<footer>
-<input type="checkbox" id="footer-opacity" hidden>
-<label for="footer-opacity" title="Toggle footer opacity" class="media-noprint">
-{{ include "icons/lightbulb.svg" }}
-{{ include "icons/lightbulb-fill.svg" }}
-</label>
-<nav>
+<body>
     <!--
         Welcome fellow view-source enthusiast!
 
         You can find the source code for my website on GitHub
         {{ site.repository_url }}
     -->
+    <header>
+    <nav id="skip-nav">
+    <a class="skip media-noprint" href="#main-content" title="Skip to page main content">Main Content</a>
+    </nav>
+    <nav id="main-nav">
     <ul>
-        <li><a rel="me external" href="{{ social.mastodon }}" title="Mastodon">{{ include 'icons/mastodon.svg' }}</a></li>
-        <li><a rel="me external" href="{{ social.github }}" title="GitHub">{{ include 'icons/github.svg' }}</a></li>
+        <li>
+            <a href="/" title="{{ site.title }}">
+                {{ include 'svg/logo.svg' }}
+            </a>
+        </li>
+        <li>
+            <a href="{{ '/about/' |> url }}">About</a>
+        </li>
+        <li>
+            <a href="{{ '/subscribe/' |> url }}">Subscribe</a>
+        </li>
     </ul>
-</nav>
-{{ include 'footer.md' |> md }}
-</footer>
+    </nav>
+    </header>
 
-{{ if prod }}
-<script async src="{{ analytics.script }}" data-website-id="{{ analytics.id }}"></script>
-{{ /if }}
+    <main id="main-content">
+    <a class="skip media-noprint" href="#">Reset Focus</a>
+    {{ content }}
+    </main>
+
+    <footer>
+    <input type="checkbox" id="footer-opacity" hidden>
+    <label for="footer-opacity" title="Toggle footer opacity" class="media-noprint">
+    {{ include "icons/lightbulb.svg" }}
+    {{ include "icons/lightbulb-fill.svg" }}
+    </label>
+    <nav>
+        <ul>
+            <li><a rel="me external" href="{{ social.mastodon }}" title="Mastodon">{{ include 'icons/mastodon.svg' }}</a></li>
+            <li><a rel="me external" href="{{ social.github }}" title="GitHub">{{ include 'icons/github.svg' }}</a></li>
+        </ul>
+    </nav>
+    {{ include 'footer.md' |> md }}
+    </footer>
+
+    {{ if prod }}
+    <script async src="{{ analytics.script }}" data-website-id="{{ analytics.id }}"></script>
+    {{ /if }}
+</body>
+
