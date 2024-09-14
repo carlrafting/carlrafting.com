@@ -1,9 +1,10 @@
 ---
 layout: ./page.vto
 ---
-
+<article>
 <h1>{{ title }}</h1>
 <time datetime="{{ date.toISOString() }}">{{ date |> date('HUMAN_DATE') }}</time>
 <a href="{{ url |> url(true) }}">Permalink</a>
 
 {{ content }}
+</article>
