@@ -53,6 +53,7 @@ body {
 }
 
 a {
+
     &,
     &:where(:link, :visited) {
         color: var(--color-links);
@@ -62,42 +63,33 @@ a {
     }
 
     &:where(:hover, :focus) {
-        color: var(--color-text);
+        color: color-mix(in var(--color-space),
+                var(--color-links) 100%,
+                var(--color-text) 33%);
         text-decoration: underline;
     }
 
     &:where(:active) {
-        color: color-mix(
-            in var(--color-space),
-            var(--color-links) 100%,
-            var(--color-text) 33%
-        );
-        text-decoration: none;
+        color: var(--color-text);
     }
 }
 
 hr {
-    color: color-mix(
-        in var(--color-space),
-        var(--color-red) 100%,
-        var(--color-background) 50%
-    );
+    color: color-mix(in var(--color-space),
+            var(--color-red) 100%,
+            var(--color-background) 50%);
 }
 
 blockquote {
-    color: color-mix(
-        in var(--color-space),
-        var(--color-text) 75%,
-        var(--color-overlay) 50%
-    );
+    color: color-mix(in var(--color-space),
+            var(--color-text) 75%,
+            var(--color-overlay) 50%);
     background-color: var(--color-overlay);
 
     &::before {
-        color: color-mix(
-            in var(--color-space),
-            var(--color-text) 10%,
-            var(--color-red) 80%
-        );
+        color: color-mix(in var(--color-space),
+                var(--color-text) 10%,
+                var(--color-red) 80%);
     }
 }
 
