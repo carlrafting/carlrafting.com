@@ -11,6 +11,7 @@ import lang_bash from "npm:highlight.js/lib/languages/bash";
 const prod = Deno.env.get("DENO_ENV") === "prod";
 const site = lume({
   src: "./src",
+  location: new URL('https://carlrafting.com')
 });
 site.use(date());
 site.use(codeHighlight({
