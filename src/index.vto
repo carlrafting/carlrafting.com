@@ -23,7 +23,7 @@ layout: layouts/page.vto
     {{ /if }}
     <article>
         <time datetime="{{ post.date.toISOString() }}">{{ post.date |> date('dd') }}</time>
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
     </article>
 {{ /for }}
 </div>
