@@ -26,8 +26,8 @@ site.use(feed({
   output: ["feed.xml", "feed.json"],
   query: "type=post",
   info: {
-    title: "Carl Räftings Feed",
-    description: "=site.title",
+    title: "Carl Räftings WWW",
+    description: "Feed for Carl Räftings WWW",
     generator: false,
   },
 }));
