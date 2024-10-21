@@ -110,9 +110,9 @@ h3 {
 }
 
 p,
-ul,
-ol,
-dl,
+li,
+dt,
+dd,
 hr {
     max-inline-size: 60ch;
 }
