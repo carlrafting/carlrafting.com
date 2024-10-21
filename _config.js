@@ -1,4 +1,5 @@
 import lume from "lume/mod.ts";
+import redirects from "lume/plugins/redirects.ts";
 import date from "lume/plugins/date.ts";
 import codeHighlight from "lume/plugins/code_highlight.ts";
 import feed from "lume/plugins/feed.ts";
@@ -13,6 +14,7 @@ const site = lume({
   src: "./src",
   location: new URL('https://carlrafting.com')
 });
+site.use(redirects());
 site.use(date());
 site.use(codeHighlight({
   languages: {
