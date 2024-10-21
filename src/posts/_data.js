@@ -4,5 +4,6 @@
  */
 export const url = (page) => {
   const { basename, slug } = page.data;
-  return `/post/${slug ? slug : basename}/`;
+  // return `/post/${slug ? slug : basename}/`;
+  return `/${slug ? slug : basename}/`;
 };
