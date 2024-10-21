@@ -1,0 +1,18 @@
+/* posts index styles */
+@layer posts {
+    .posts {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .posts article {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-block-end: 1rem;
+    }
+
+    .posts article h4 {
+        margin-block: 0;
+    }
+}
