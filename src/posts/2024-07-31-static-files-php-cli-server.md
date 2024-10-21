@@ -1,5 +1,6 @@
 ---
 title: Serving Static Files with PHP's CLI-Server
+oldUrl: /post/static-files-php-cli-server/
 ---
 
 I recently stumbled upon a case where i needed to serve static files with PHP's
@@ -42,7 +43,18 @@ First of, let's create some files for testing.
 ```css
 /* web/css/styles.css */
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
 }
 ```
 
