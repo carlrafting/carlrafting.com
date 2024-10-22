@@ -3,8 +3,14 @@ layout: ./page.vto
 ---
 <article {{ if lang }}lang="{{ lang }}"{{ /if }}>
 <h1>{{ title }}</h1>
-<time datetime="{{ date.toISOString() }}">{{ date |> date('HUMAN_DATE') }}</time>
-<a href="{{ url |> url(true) }}">Permalink</a>
+<time datetime="{{ date.toISOString() }}">{{ date |> date('HUMAN_DATE', lang) }}</time>
+<a href="{{ url |> url(true) }}">
+    {{ if lang == 'en' }}
+    Permalink
+    {{ else if lang == 'sv' }}
+    Permanentlänk
+    {{ /if }}
+</a>
 
 {{ content }}
 </article>

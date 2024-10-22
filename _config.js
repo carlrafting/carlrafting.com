@@ -9,13 +9,18 @@ import lang_css from "npm:highlight.js/lib/languages/css";
 import lang_javascript from "npm:highlight.js/lib/languages/javascript";
 import lang_bash from "npm:highlight.js/lib/languages/bash";
 
+import { enGB } from "npm:date-fns@4.1.0/locale/en-GB";
+import { sv } from "npm:date-fns@4.1.0/locale/sv";
+
 const prod = Deno.env.get("DENO_ENV") === "prod";
 const site = lume({
   src: "./src",
   location: new URL('https://carlrafting.com')
 });
 site.use(redirects());
-site.use(date());
+site.use(date({
+  locales: { enGB, sv }
+}));
 site.use(codeHighlight({
   languages: {
     xml: lang_xml,
