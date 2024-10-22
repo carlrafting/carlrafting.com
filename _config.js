@@ -3,6 +3,7 @@ import redirects from "lume/plugins/redirects.ts";
 import date from "lume/plugins/date.ts";
 import codeHighlight from "lume/plugins/code_highlight.ts";
 import feed from "lume/plugins/feed.ts";
+import sitemap from "lume/plugins/sitemap.ts";
 
 import lang_xml from "npm:highlight.js/lib/languages/xml";
 import lang_css from "npm:highlight.js/lib/languages/css";
@@ -38,6 +39,7 @@ site.use(feed({
     generator: false,
   },
 }));
+site.use(sitemap());
 
 site.data("prod", prod === true);
 
