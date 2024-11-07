@@ -11,6 +11,18 @@ layout: ./page.vto
     Permanentlänk
     {{ /if }}
 </a>
-
 {{ content }}
+<footer>
+{{ set post = search.previousPage(url, 'type=post') }}
+
+{{ if post }}
+  <a href="{{ post.url }}" rel="prev">← {{ post.title }}</a>
+{{ /if }}
+
+{{ set post = search.nextPage(url, 'type=post') }}
+
+{{ if post }}
+  <a href="{{ post.url }}" rel="next">{{ post.title }} →</a>
+{{ /if }}
+</footer>
 </article>
