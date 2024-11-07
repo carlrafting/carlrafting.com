@@ -75,27 +75,27 @@
 }
 
 @layer footer {
-    footer {
+    body>footer {
         font-size: calc((14 / 16) * 1rem);
         line-height: 1.375;
     }
 
-    footer>* {
+    body>footer>* {
         transition: opacity 100ms ease-in-out;
         opacity: 25%;
     }
 
-    footer:focus-within>*,
-    footer:hover>* {
+    body>footer:focus-within>*,
+    body>footer:hover>* {
         opacity: 100%;
     }
 
-    footer svg {
+    body>footer svg {
         width: 1.5rem !important;
         height: 1.5rem !important;
     }
 
-    footer nav ul {
+    body>footer nav ul {
         display: flex;
         column-gap: 1rem;
     }
