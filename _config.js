@@ -4,6 +4,7 @@ import date from "lume/plugins/date.ts";
 import codeHighlight from "lume/plugins/code_highlight.ts";
 import feed from "lume/plugins/feed.ts";
 import sitemap from "lume/plugins/sitemap.ts";
+import checkUrls from "lume/plugins/check_urls.ts";
 
 import lang_xml from "npm:highlight.js/lib/languages/xml";
 import lang_css from "npm:highlight.js/lib/languages/css";
@@ -18,6 +19,7 @@ const site = lume({
   src: "./src",
   location: new URL('https://carlrafting.com')
 });
+site.use(checkUrls());
 site.use(redirects());
 site.use(date({
   locales: { enGB, sv }
