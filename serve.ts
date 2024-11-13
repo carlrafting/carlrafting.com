@@ -1,10 +1,12 @@
 import Server from "lume/core/server.ts";
 
+const port = 8080;
+const root = `${Deno.cwd()}/_site`;
 const server = new Server({
-    port: 8080,
-    root: `${Deno.cwd()}/_site`,
+    port,
+    root,
 });
 
 server.start();
 
-console.log("Listening on http://localhost:8080");
+console.log(`Listening on http://localhost:${port}`);
