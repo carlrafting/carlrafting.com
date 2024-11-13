@@ -33,12 +33,8 @@
 {{# <script type="module">
 {{ include "serviceworker/setup.js" }}
 </script> #}}
-<style media="all">
-{{ include "../../css/global/all.css" }}
-</style>
-<style media="screen">
-{{ include "../../css/global/screen.css" }}
-</style>
+<link rel="stylesheet" href="/css/global/all.css" media="all">
+<link rel="stylesheet" href="/css/global/screen.css" media="screen">
 <link rel="stylesheet" href="/css/global/print.css" media="print">
 {{ content }}
 </html>
