@@ -33,6 +33,9 @@
 {{# <script type="module">
 {{ include "serviceworker/setup.js" }}
 </script> #}}
+{{ if analytics }}
+<script defer src="{{ analytics.script }}" data-website-id="{{ analytics.id }}"></script>
+{{ /if }}
 <link rel="stylesheet" href="/css/global/all.css" media="all">
 <link rel="stylesheet" href="/css/global/screen.css" media="screen">
 <link rel="stylesheet" href="/css/global/print.css" media="print">
