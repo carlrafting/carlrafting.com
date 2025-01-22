@@ -1,6 +1,8 @@
 ---
 title: Serving Static Files with PHP's CLI-Server
-oldUrl: /post/static-files-php-cli-server/
+oldUrl:
+    - /static-files-php-cli-server/
+    - /post/static-files-php-cli-server/
 ---
 
 I recently stumbled upon a case where i needed to serve static files with PHP's
