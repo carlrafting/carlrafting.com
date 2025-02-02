@@ -16,7 +16,7 @@ import { sv } from "npm:date-fns@4.1.0/locale/sv";
 
 const prod = Deno.env.get("DENO_ENV") === "prod";
 const site = lume({
-  src: ".",
+  src: "./src",
   location: new URL('https://carlrafting.com')
 });
 site.use(checkUrls());
@@ -24,7 +24,7 @@ site.use(redirects());
 site.use(date({
   locales: { enGB, sv }
 }));
-/* site.use(codeHighlight({
+site.use(codeHighlight({
   languages: {
     xml: lang_xml,
     css: lang_css,
@@ -32,8 +32,7 @@ site.use(date({
     bash: lang_bash,
   },
 }));
- */
-/* site.use(feed({
+site.use(feed({
   output: ["feed.xml", "feed.json"],
   query: "type=post",
   info: {
@@ -41,13 +40,13 @@ site.use(date({
     description: "Feed for Carl Räftings WWW",
     generator: false,
   },
-})); */
-// site.use(sitemap());
+}));
+site.use(sitemap());
 
 site.data("prod", prod === true);
 
-// site.copy([".css", ".js"]);
-// site.copy("assets/manifest.webmanifest");
+site.copy([".css", ".js"]);
+site.copy("assets/manifest.webmanifest");
 site.copyRemainingFiles();
 
 // console.log({ site });
