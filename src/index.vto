@@ -5,8 +5,6 @@ layout: layouts/page.vto
 
 {{ include 'intro.md' |> md }}
 
-<h1>Blog Posts</h1>
-
 <div class="posts">
 {{ set current_year = null }}
 {{ set current_month = null }}
@@ -21,7 +19,7 @@ layout: layouts/page.vto
         {{ set current_month = month }}
         <h3>{{ post.date |> date('MMMM') }}</h3>
     {{ /if }}
-    <article>
+    <article {{ if post.lang }} lang="{{ post.lang }}" {{ /if }}>
         <time datetime="{{ post.date.toISOString() }}">{{ post.date |> date('dd') }}</time>
         <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
     </article>

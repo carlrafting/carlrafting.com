@@ -33,12 +33,16 @@ legend {
     margin-block-end: 1rem;
 }
 
+iframe {
+    border: 0;
+}
+
 svg,
 img {
     display: block;
     width: auto;
     height: auto;
-    max-width: 100%;
+    max-inline-size: 100%;
 }
 
 figure {
@@ -92,7 +96,6 @@ h1,
 h2,
 h3 {
     line-height: 1.1875;
-    max-inline-size: 40ch;
     text-wrap: balance;
 }
 
@@ -144,12 +147,19 @@ blockquote {
     &::before {
         content: "»";
         font-size: 2rem;
-        line-height: 1;
         position: absolute;
         top: 0;
         left: 0;
-        translate: .5rem;
+        translate: .75rem .5rem;
     }
+}
+
+figure {
+    margin-block-end: 1rem;
+}
+
+.symbol {
+    opacity: 50%;
 }
 
 .text-italic {

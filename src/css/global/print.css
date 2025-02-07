@@ -4,3 +4,8 @@ a[href] {
         content: " (" attr(href) ") ";
     }
 }
+
+
+nav {
+    display: none;
+}

@@ -127,3 +127,9 @@
         }
     }
 }
+
+@layer article {
+    article>header {
+        margin-block-end: 1rem;
+    }
+}
