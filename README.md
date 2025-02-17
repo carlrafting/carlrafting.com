@@ -6,4 +6,4 @@ All website content is licensed under
 
 ## Deploy status
 
-![Deploy Status](https://github.com/carlrafting/carlrafting.com/actions/workflows/deno.yml/badge.svg)
+![Deploy Status](https://github.com/carlrafting/carlrafting.com/actions/workflows/deploy.yml/badge.svg)
