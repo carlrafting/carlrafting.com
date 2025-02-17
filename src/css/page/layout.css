@@ -28,7 +28,18 @@
 }
 
 @layer header {
-    header nav:where(:last-child) ul {
+    body>header {
+        display: flex;
+        align-items: center;
+        padding-block: 1rem;
+        flex-wrap: wrap;
+    }
+
+    body>header nav:where(:last-child) {
+        margin-inline-start: auto;
+    }
+
+    body>header nav:where(:last-child) ul {
         display: flex;
         flex-wrap: wrap;
         column-gap: 1rem;
@@ -36,7 +47,7 @@
         max-inline-size: none;
     }
 
-    header nav:where(:last-child) ul>li:where(:first-child) {
+    body>header nav:where(:last-child) ul>li:where(:first-child) {
         margin-inline-end: auto;
     }
 
@@ -76,18 +87,10 @@
 
 @layer footer {
     body>footer {
+        color: color-mix(in srgb, var(--color-text) 60%, var(--color-red));
         font-size: calc((14 / 16) * 1rem);
         line-height: 1.375;
-    }
-
-    body>footer>* {
-        transition: opacity 100ms ease-in-out;
-        opacity: 25%;
-    }
-
-    body>footer:focus-within>*,
-    body>footer:hover>* {
-        opacity: 100%;
+        padding-block-end: 1rem;
     }
 
     body>footer svg {
@@ -98,33 +101,6 @@
     body>footer nav ul {
         display: flex;
         column-gap: 1rem;
-    }
-
-    @layer toggle-opacity {
-        label[for=footer-opacity] {
-            &>svg[data-state] {
-                display: none !important;
-                margin-inline: auto;
-            }
-
-            :not(:checked)+&>svg[data-state=off],
-            :checked+&>svg[data-state=on] {
-                display: block !important;
-            }
-        }
-
-        #footer-opacity {
-
-            &,
-            &+label {
-                transition: none;
-                opacity: 100% !important;
-            }
-
-            &:checked+label~* {
-                opacity: 100% !important;
-            }
-        }
     }
 }
 

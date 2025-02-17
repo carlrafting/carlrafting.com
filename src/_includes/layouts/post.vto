@@ -16,16 +16,23 @@ layout: ./page.vto
 </header>
 {{ content }}
 <footer>
+<nav class="post-nav">
+  <ul>
+    <li>
 {{ set post = search.previousPage(url, 'type=post') }}
-
 {{ if post }}
-  <a href="{{ post.url }}" rel="prev">← {{ post.title }}</a>
+  <span>Previous</span><br>
+  <a href="{{ post.url }}" rel="prev">{{ post.title }}</a>
 {{ /if }}
-
+    </li>
+    <li>
 {{ set post = search.nextPage(url, 'type=post') }}
-
 {{ if post }}
-  <a href="{{ post.url }}" rel="next">{{ post.title }} →</a>
+  <span>Next</span><br>
+  <a href="{{ post.url }}" rel="next">{{ post.title }}</a>
 {{ /if }}
+    </li>
+  </ul>
+</nav>
 </footer>
 </article>
